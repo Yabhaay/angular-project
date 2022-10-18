@@ -2,11 +2,7 @@
     <form class="my-4 d-flex">
         <select name="country" class="mx-2" id="country" *ngFor="let country of countries">
             <option value="select">Select Country</option>
-            <option value="0">Select Country</option>
-        </select>
-        <select name="city" class="mx-2" id="city" >
-            <option value="select">Select City</option>
-            <option value="0">Select Country</option>
+            <option value="{{country.country}}">{{country.country}}</option>
         </select>
         <button type="submit" class="btn btn-primary ">Go</button>
     </form>
