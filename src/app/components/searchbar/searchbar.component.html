@@ -1,6 +1,6 @@
 <div class="container d-flex justify-content-center">
     <form class="my-4 d-flex">
-        <select name="country" class="mx-2" id="country" >
+        <select name="country" class="mx-2" id="country" *ngFor="let country of countries">
             <option value="select">Select Country</option>
             <option value="0">Select Country</option>
         </select>
