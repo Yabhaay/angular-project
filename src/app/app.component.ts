@@ -23,13 +23,16 @@ export class AppComponent {
           this.countries = data;
       }
     )
+  }  
+  onSubmitGet(e: { preventDefault: () => void; }) {
+    e.preventDefault();
     // this._getWeather.getWeather()
     //   .subscribe(
-    //     data=>{
-    //       this.weather = data;
-    //   }
-    // )
-  }  
+      //     data=>{
+        //       this.weather = data;
+        //   }
+        // )
+      }
 
   title = 'my-first-project';
 }
