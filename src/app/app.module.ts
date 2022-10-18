@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GetCountries } from './ApiCalls/getCountries';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { GetWeather } from './ApiCalls/getWeather';
 
 
 @NgModule({
@@ -26,7 +27,10 @@ import { HttpClient } from "@angular/common/http";
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [GetCountries],
+  providers: [
+    GetCountries,
+    GetWeather
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

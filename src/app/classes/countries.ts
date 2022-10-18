@@ -1,4 +1,4 @@
 export class countries
 {
-    country: string | undefined;
+  constructor(public country : string) { };
 }

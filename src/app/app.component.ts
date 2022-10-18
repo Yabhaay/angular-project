@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { subscribeOn } from 'rxjs';
 import { GetCountries } from './ApiCalls/getCountries';
+import { GetWeather } from './ApiCalls/getWeather';
 import { countries } from './classes/countries';
+import { weather } from './classes/weather';
 
 
 
@@ -11,10 +13,17 @@ import { countries } from './classes/countries';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _getCountries:GetCountries){}
+  constructor(private _getCountries: GetCountries, _getWeather: GetWeather) { };
   countries: countries[] | undefined;
+  weather: weather[] | undefined;
   ngOnInit() {
     this._getCountries.getCountries()
+      .subscribe(
+        data=>{
+          this.countries = data;
+      }
+    )
+    this._getWeather.getWeather()
       .subscribe(
         data=>{
           this.countries = data;
