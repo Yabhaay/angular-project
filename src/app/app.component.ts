@@ -23,12 +23,12 @@ export class AppComponent {
           this.countries = data;
       }
     )
-    this._getWeather.getWeather()
-      .subscribe(
-        data=>{
-          this.countries = data;
-      }
-    )
+    // this._getWeather.getWeather()
+    //   .subscribe(
+    //     data=>{
+    //       this.weather = data;
+    //   }
+    // )
   }  
 
   title = 'my-first-project';

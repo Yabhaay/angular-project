@@ -1,9 +1,17 @@
 <div class="container d-flex justify-content-center">
     <form class="my-4 d-flex">
-        <select name="country" class="mx-2" id="country" *ngFor="let country of countries">
+        <!-- without api -->
+        <select name="country" class="mx-2" id="country" >
+            <option value="select">Select Country</option>
+            <option value="select">Select Country</option>
+            <option value="select">Select Country</option>
+            <option value="select">Select Country</option>
+        </select>
+        <!-- <select name="country" class="mx-2" id="country" *ngFor="let country of countries">
+            with api
             <option value="select">Select Country</option>
             <option value="{{country.country}}">{{country.country}}</option>
-        </select>
+        </select> -->
         <button type="submit" class="btn btn-primary ">Go</button>
     </form>
 </div>
